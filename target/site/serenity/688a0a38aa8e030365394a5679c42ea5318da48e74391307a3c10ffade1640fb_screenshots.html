@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="ecfc9ae43b0aaff1c736566057800a2237b1a5071ad3fa817049a4271109bfca.html">Agregar Productos Al Carrito De Compras</a></span>
+                > <span class="truncate-60"><a
+                    href="688a0a38aa8e030365394a5679c42ea5318da48e74391307a3c10ffade1640fb.html">Agregar 2 producto con 5 cantidades al carrito de compras </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 30-05-2025 14:40</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Agregar Productos Al Carrito De Compras </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="d77771520c65c6cbd1574997a9d3c86e949fc5044cb275d2b8eadc0aaee74f89.html">Case1
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Agregar 2 producto con 5 cantidades al carrito de compras
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="911998ef53ddc5ec0702b99619292a9421c126354f751a927b1e0bd1cff5bb1a.png" title=" Dado &quot;Luis&quot; ingresa el sitio web" width="1910"/>
+                <img src="911998ef53ddc5ec0702b99619292a9421c126354f751a927b1e0bd1cff5bb1a.png" title=" Luis open web" width="1910"/>
+                <img src="911998ef53ddc5ec0702b99619292a9421c126354f751a927b1e0bd1cff5bb1a.png" title=" Luis opens the browser at https://sanangel.com.co/" width="1910"/>
+                <img src="911998ef53ddc5ec0702b99619292a9421c126354f751a927b1e0bd1cff5bb1a.png" title=" Luis open web (completed)" width="1910"/>
+                <img src="c21a0c1f95cb658b2629fa2ab4d3d05836f4ee9a850f5b945511c2b215ef0c2e.png" title=" Then the title of the page should be a string containing 'Florister&amp;iacute;a'" width="1910"/>
+                <img src="c21a0c1f95cb658b2629fa2ab4d3d05836f4ee9a850f5b945511c2b215ef0c2e.png" title=" Dado &quot;Luis&quot; ingresa el sitio web (completed)" width="1910"/>
+                <img src="911998ef53ddc5ec0702b99619292a9421c126354f751a927b1e0bd1cff5bb1a.png" title=" Y selecciona dos producto e ingresa 5 cantidades" width="1910"/>
+                <img src="911998ef53ddc5ec0702b99619292a9421c126354f751a927b1e0bd1cff5bb1a.png" title=" Luis seleccionar elementos task" width="1910"/>
+                <img src="2cf7198e8241ee3a53dacd8b5ca67323820b61be69a983544998dcebc3677631.png" title=" Luis clicks on Primer objeto" width="1910"/>
+                <img src="1f844a2404a25af2e152b10091854dc9c54db9faa60acd72fb8b37f53a1fda28.png" title=" Luis clicks on Primer objeto (completed)" width="1910"/>
+                <img src="81e920e3247a330bddc593a3b90125b09c3dc2f76989a0f5b5b6749952cc8d23.png" title=" Luis clicks on opcion cantidades" width="1910"/>
+                <img src="60d70f201872998eb853b5ab0f8a46f4f9891c905f23de58a5ff3107c20777a5.png" title=" Luis clicks on opcion cantidades" width="1910"/>
+                <img src="9c1c39cb95fc8983f79511043f670f073a40e7b40432279f604550fea2c08b61.png" title=" Luis clicks on opcion cantidades (completed)" width="1910"/>
+                <img src="9c1c39cb95fc8983f79511043f670f073a40e7b40432279f604550fea2c08b61.png" title=" Luis enters '5' into opcion cantidades" width="1910"/>
+                <img src="3ada285f7672cf58dd9d123fb5537bfb2aa9020b4db2c28fe24320769626ced1.png" title=" Luis enters '5' into opcion cantidades" width="1910"/>
+                <img src="fead5d89965912f1b6085d0d0cc28fcf8e17532cb4f15f0873293faca58c8109.png" title=" Luis enters '5' into opcion cantidades (completed)" width="1910"/>
+                <img src="fead5d89965912f1b6085d0d0cc28fcf8e17532cb4f15f0873293faca58c8109.png" title=" Luis clicks on Agregar al carrito" width="1910"/>
+                <img src="0b6cd21eda6a8b6fddc5acd6a49c74626377d8e948f5e32330f2a6b1f262e626.png" title=" Luis clicks on Agregar al carrito" width="1910"/>
+                <img src="e1d92a1f854147e17e6ae215c4b152eb942b5a76e6032ef7cd571730913abd67.png" title=" Luis clicks on Agregar al carrito (completed)" width="1910"/>
+                <img src="2495b65a2251fba490712bfb778326a075e703775d753c3ed67ccf842e762467.png" title=" Luis clicks on opcion cantidades" width="1910"/>
+                <img src="5af068f630e0f8e5a560eeae03cc02cf9abbd4e2006db641e2be6d8de2acd283.png" title=" Luis clicks on opcion cantidades" width="1910"/>
+                <img src="2ba8b7e17ba07a15c76fd239c34064267b3379ae071800c509c2e119fade11f7.png" title=" Luis clicks on opcion cantidades (completed)" width="1910"/>
+                <img src="53d8f06ea8c6ccefd9274e53631eb6d41d36b601b5ccc64bfea68cf87c5e3e99.png" title=" Luis clicks on Primer objeto" width="1910"/>
+                <img src="65bb837e38bb57d344f490a4628bf68e7951d3e9afa972f86c072710ca9d4420.png" title=" Luis clicks on Primer objeto (completed)" width="1910"/>
+                <img src="4fb177ed95b509601c7f4c5168d2d9ed8f92a07db9fcdcdc81db10e034cee42a.png" title=" Luis clicks on opcion cantidades" width="1910"/>
+                <img src="72e981805cdf75f61f3096ab131c33487d8b783df806b667755ca7c8cac4b578.png" title=" Luis clicks on opcion cantidades" width="1910"/>
+                <img src="c5f17aad1fbfa351d77b1b68039468c36a8558ef784cb675352b87ed9f73b913.png" title=" Luis clicks on opcion cantidades (completed)" width="1910"/>
+                <img src="c5f17aad1fbfa351d77b1b68039468c36a8558ef784cb675352b87ed9f73b913.png" title=" Luis enters '5' into opcion cantidades" width="1910"/>
+                <img src="cee51445db06c199bb511cc3a708ea1f4f90a40dbaa508305b7e9ccd1719beb4.png" title=" Luis enters '5' into opcion cantidades (completed)" width="1910"/>
+                <img src="cee51445db06c199bb511cc3a708ea1f4f90a40dbaa508305b7e9ccd1719beb4.png" title=" Luis seleccionar elementos task (completed)" width="1910"/>
+                <img src="7d1b8620c4690ac0e1ae862d7499ba9c691470a917b7e12839363e8515809246.png" title=" Y selecciona dos producto e ingresa 5 cantidades (completed)" width="1910"/>
+                <img src="cee51445db06c199bb511cc3a708ea1f4f90a40dbaa508305b7e9ccd1719beb4.png" title=" Cuando selecciona la opcion &quot;a&ntilde;adir al carrito&quot;" width="1910"/>
+                <img src="cee51445db06c199bb511cc3a708ea1f4f90a40dbaa508305b7e9ccd1719beb4.png" title=" Luis agregar carrito" width="1910"/>
+                <img src="723410c19d1bfce1109d5621a8a62f88836356176dc8d7bb302068180b7b82c2.png" title=" Luis clicks on Agregar al carrito" width="1910"/>
+                <img src="0844294116b752fb05ce510f8076dda22f2302ec30114e1fe185e9e542fa8e7a.png" title=" Luis clicks on Agregar al carrito (completed)" width="1910"/>
+                <img src="0844294116b752fb05ce510f8076dda22f2302ec30114e1fe185e9e542fa8e7a.png" title=" Luis agregar carrito (completed)" width="1910"/>
+                <img src="0844294116b752fb05ce510f8076dda22f2302ec30114e1fe185e9e542fa8e7a.png" title=" Cuando selecciona la opcion &quot;a&ntilde;adir al carrito&quot; (completed)" width="1910"/>
+                <img src="c4ca4f0ce400ab8bceabe279e154ce0ec204ca3380fa6430371924f3502e7640.png" title=" Entonces se visualizara los productos con las cantidad" width="1910"/>
+                <img src="c4ca4f0ce400ab8bceabe279e154ce0ec204ca3380fa6430371924f3502e7640.png" title=" Then validar texto" width="1910"/>
+                <img src="c4ca4f0ce400ab8bceabe279e154ce0ec204ca3380fa6430371924f3502e7640.png" title=" Entonces se visualizara los productos con las cantidad (completed): <span class='success-color'>SUCCESS</span>" width="1910"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.3.4</span>
+</div>
+</body>
+</html>

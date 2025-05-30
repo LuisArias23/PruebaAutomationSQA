@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/test.feature",
         glue = "co.sqa.stepdefinition",
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        tags = "@Run"
+        tags = "@RUN"
 )
 public class TestRunner {
 }
